@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/script.js" defer></script>
+    <title>Book Review Hub</title>
+  </head>
+  <body class="overflow-x-hidden">
+    <section class="h-screen">
+      <nav class="container relative mx-auto p-6">
+        <!-- Flex Container For Nav Items -->
+        <div class="flex items-center justify-between space-x-20 my-4">
+          <!-- Logo -->
+          <div class="z-30">
+            <img src="./images/log" alt="logo" id="logo"  />
+          </div>
+
+          <!-- Menu Items -->
+          <div
+            class="hidden items-center space-x-10 uppercase text-grayishBlue md:flex"
+          >
+            <a href="#reviews" class="tracking-widest hover:text-softRed"
+              >Reviews</a
+            >
+            <a href="#genres" class="tracking-widest hover:text-softRed"
+              >Genres</a
+            >
+            <a href="#faq" class="tracking-widest hover:text-softRed">FAQ</a>
+            <a
+              href="#"
+              class="px-8 py-2 text-white bg-softRed border-2 border-softRed rounded-lg shadow-md hover:text-softRed hover:bg-white"
+              >Login</a
+            >
+          </div>
+          <!-- Hamburger Button -->
+          <button
+            id="menu-btn"
+            class="z-30 block md:hidden focus:outline-none hamburger"
+          >
+            <span class="hamburger-top"></span>
+            <span class="hamburger-middle"></span>
+            <span class="hamburger-bottom"></span>
+          </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div
+          id="menu"
+          class="fixed inset-0 z-20 hidden flex-col items-center self-end w-full h-full m-h-screen px-6 py-1 pt-24 pb-4 tracking-widest text-white uppercase divide-y divide-gray-500 opacity-90 bg-veryDarkBlue"
+        >
+          <div class="w-full py-3 text-center">
+            <a href="#reviews" class="block hover:text-softRed">Reviews</a>
+          </div>
+          <div class="w-full py-3 text-center">
+            <a href="#genres" class="block hover:text-softRed">Genres</a>
+          </div>
+          <div class="w-full py-3 text-center">
+            <a href="#faq" class="block hover:text-softRed">FAQ</a>
+          </div>
+          <div class="w-full py-3 text-center">
+            <a href="#" class="block hover:text-softRed">Login</a>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Hero Section -->
+      <section id="hero">
+        <!-- Container For Image & Content -->
+        <div
+          class="container flex flex-col-reverse mx-auto p-6 lg:flex-row lg:mb-0"
+        >
+          <!-- Content -->
+          <div class="flex flex-col space-y-10 lg:mt-14 lg:w-1/2">
+            <h1
+              class="text-3xl font-semibold text-center lg:text-6xl lg:text-left"
+            >
+              Discover Your Next Favorite Book
+            </h1>
+            <p
+              class="max-w-md mx-auto text-lg text-center text-gray-400 lg:text-2xl lg:text-left lg:mt-0 lg:mx-0"
+            >
+              Explore thousands of book reviews and find recommendations across
+              all genres. Share your thoughts and become a part of the reading
+              community.
+            </p>
+
+            <!-- Buttons Container -->
+            <div
+              class="flex items-center justify-center w-full space-x-4 lg:justify-start"
+            >
+              <a
+                href="#"
+                class="p-4 text-sm font-semibold text-white bg-softBlue rounded shadow-md border-2 border-softBlue md:text-base hover:bg-white hover:text-softBlue"
+                >Explore Reviews</a
+              >
+              <a
+                href="#"
+                class="p-4 text-sm font-semibold text-black bg-gray-300 rounded shadow-md border-2 border-gray-300 md:text-base hover:bg-white hover:text-gray-600"
+                >Join the Community</a
+              >
+            </div>
+          </div>
+
+          <!-- Image -->
+          <div class="relative mx-auto lg:mx-0 lg:mb-0 lg:w-1/2">
+            <img
+              src="./images/tumblr_6962b8cda8ab9fde9f17a0cd0edd41f4_4f8ee54c_1280.gif"
+              alt="Stack of Books"
+              class="relative z-10 lg:top-24 xl:top-0 overflow-x-visible"
+            />
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <section class="mt-10">
+      <div
+        class="flex flex-col items-center justify-between max-w-6xl px-10 mx-auto space-y-16 my-48 xl:my-20 xl:flex-row md:space-y-0"
+      >
+        <!-- Total Users -->
+        <div class="flex flex-col items-center">
+          <h2 class="text-4xl font-bold text-softBlue">1,200+</h2>
+          <p class="text-lg text-gray-400">Total Users</p>
+        </div>
+
+        <!-- Active Users -->
+        <div class="flex flex-col items-center">
+          <h2 class="text-4xl font-bold text-softBlue">850+</h2>
+          <p class="text-lg text-gray-400">Active Users</p>
+        </div>
+
+        <!-- Reviews -->
+        <div class="flex flex-col items-center">
+          <h2 class="text-4xl font-bold text-softBlue">5,000+</h2>
+          <p class="text-lg text-gray-400">Book Reviews</p>
+        </div>
+
+        <!-- Genres Covered -->
+        <div class="flex flex-col items-center">
+          <h2 class="text-4xl font-bold text-softBlue">30+</h2>
+          <p class="text-lg text-gray-400">Genres Covered</p>
+        </div>
+
+        <!-- Community Contributions -->
+        <div class="flex flex-col items-center">
+          <h2 class="text-4xl font-bold text-softBlue">2,500+</h2>
+          <p class="text-lg text-gray-400">Community Contributions</p>
+        </div>
+      </div>
+    </section>
+    <div class="mt-10"></div>
+    <!-- Features Heading -->
+    <section id="features" class="">
+      <div class="container mx-auto px-6">
+        <h2 class="mb-6 text-4xl font-semibold text-center">Features</h2>
+        <p class="max-w-md mx-auto text-center text-grayishBlue">
+          Our platform is designed to help book lovers discover, review, and
+          share their favorite reads. Engage with a community of readers and
+          find your next favorite book.
+        </p>
+      </div>
+    </section>
+
+    <!-- Features Tabs -->
+    <section id="tabs">
+      <!-- Tabs/Panels Container -->
+      <div class="container relative mx-auto my-6 mb-32 mt-12 px-6">
+        <!-- <div class="bg-tabs"></div> -->
+        <!-- Tabs Flex Container -->
+        <div
+          class="flex flex-col justify-center max-w-xl mx-auto mb-6 border-b md:space-x-10 md:flex-row"
+        >
+          <!-- Tab 1 -->
+          <div
+            class="flex justify-center text-center cursor-pointer text-gray-600 border-b md:border-b-0 hover:text-softRed md:w-1/3 tab"
+            data-target="panel-1"
+          >
+            <div class="py-5 border-b-4 border-softRed" data-target="panel-1">
+              Comprehensive Reviews
+            </div>
+          </div>
+
+          <!-- Tab 2 -->
+          <div
+            class="flex justify-center text-center cursor-pointer text-gray-600 border-b md:border-b-0 hover:text-softRed md:w-1/3 tab"
+            data-target="panel-2"
+          >
+            <div class="py-5" data-target="panel-2">Curated Book Lists</div>
+          </div>
+
+          <!-- Tab 3 -->
+          <div
+            class="flex justify-center text-center cursor-pointer text-gray-600 border-b md:border-b-0 hover:text-softRed md:w-1/3 tab"
+            data-target="panel-3"
+          >
+            <div class="py-5" data-target="panel-3">Community Engagement</div>
+          </div>
+        </div>
+
+        <!-- Tab Panels -->
+        <div id="panels" class="container mx-auto">
+          <!-- Panel 1 -->
+          <div
+            class="flex flex-col py-5 md:flex-row md:space-x-7 panel panel-1"
+          >
+            <!-- Panel Image -->
+            <div class="flex justify-center md:w-1/2">
+              <div>
+                <div class="border- border-cyan-950">
+                  <img
+                    src="./images/book-review-template-hand-drawn-cartoon-flat-illustration-with-reader-feedback-for-analysis-rating-satisfaction-and-comments-about-publications-vector (1).jpg"
+                    alt="Comprehensive Reviews"
+                    class="relative z-10"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- Panel Content -->
+            <div class="flex flex-col space-y-8 md:w-1/2">
+              <h3
+                class="mt-32 text-3xl font-semibold text-center md:mt-0 md:text-left"
+              >
+                In-depth Book Reviews
+              </h3>
+              <p class="max-w-md text-center text-grayishBlue md:text-left">
+                Explore thousands of detailed book reviews, written by a
+                community of avid readers. Get honest opinions and insights
+                before diving into your next read.
+              </p>
+              <div class="mx-auto md:mx-0">
+                <a
+                  href="#"
+                  class="px-6 py-3 mt-4 font-semibold text-white border-2 border-white rounded-lg md:inline-flex bg-softBlue hover:bg-white hover:text-softBlue hover:border-softBlue hover:border-2"
+                  >More Info</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Panel 2 -->
+          <div
+            class="flex flex-col hidden py-5 md:flex-row md:space-x-7 panel panel-2"
+          >
+            <!-- Panel Image -->
+            <div class="flex justify-center md:w-1/2">
+              <img
+                src="./images/e29618c03d3754aeb6ecf282c5c4d479 (1).jpg"
+                alt="Curated Book Lists"
+                class="relative z-10"
+              />
+            </div>
+            <!-- Panel Content -->
+            <div class="flex flex-col space-y-8 md:w-1/2">
+              <h3
+                class="mt-14 text-3xl font-semibold text-center md:mt-0 md:text-left"
+              >
+                Curated Book Lists
+              </h3>
+              <p class="max-w-md text-center text-grayishBlue md:text-left">
+                Discover personalized and curated book lists for every genre.
+                Whether you're into thrillers, romance, or sci-fi, we've got
+                recommendations for you.
+              </p>
+              <div class="mx-auto md:mx-0">
+                <a
+                  href="#"
+                  class="px-6 py-3 mt-4 font-semibold text-white border-2 border-white rounded-lg md:inline-flex bg-softBlue hover:bg-white hover:text-softBlue hover:border-softBlue hover:border-2"
+                  >More Info</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Panel 3 -->
+          <div
+            class="flex flex-col hidden py-5 md:flex-row md:space-x-7 panel panel-3"
+          >
+            <!-- Panel Image -->
+            <div class="flex justify-center md:w-1/2">
+              <img
+                src="images/group-readers-people-reading-books-together-young-man-woman-read-book-diverse-group-student-study-library-literature-flat-garish-vector-illustration_81894-7671 (1).jpg"
+                alt="Community Engagement"
+                class="relative z-10"
+              />
+            </div>
+            <!-- Panel Content -->
+            <div class="flex flex-col space-y-8 md:w-1/2">
+              <h3
+                class="mt-14 text-3xl font-semibold text-center md:mt-0 md:text-left"
+              >
+                Engage with the Community
+              </h3>
+              <p class="max-w-md text-center text-grayishBlue md:text-left">
+                Join a vibrant community of readers. Share your thoughts,
+                discuss your favorite books, and connect with others who share
+                your passion for reading.
+              </p>
+              <div class="mx-auto md:mx-0">
+                <a
+                  href="#"
+                  class="px-6 py-3 mt-4 font-semibold text-white border-2 border-white rounded-lg md:inline-flex bg-softBlue hover:bg-white hover:text-softBlue hover:border-softBlue hover:border-2"
+                  >More Info</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Recently Reviewed Books Section -->
+    <section id="recent-reviews" class="bg-gray-100 py-16">
+      <div class="container mx-auto px-6">
+        <h2 class="mb-8 text-4xl font-semibold text-center">
+          Recently Reviewed Books
+        </h2>
+        <div
+          class="flex flex-col space-y-8 lg:space-y-0 lg:flex-row lg:space-x-12"
+        >
+          <!-- Book 1 -->
+          <div class="bg-white p-6 rounded-lg shadow-md w-full lg:w-1/3">
+            <div>
+              <img
+                src="./images/getimage.1200x1200n.jpg"
+                alt="Book Cover"
+                class="min-w-full h-80 object-contain rounded-md"
+              />
+            </div>
+
+            <h3 class="mt-4 text-2xl font-bold">The Midnight Library</h3>
+            <p class="mt-2 text-gray-600">by Matt Haig</p>
+            <div class="flex items-center mt-2">
+              <span class="text-yellow-500">&#9733;</span>
+              <span class="text-yellow-500">&#9733;</span>
+              <span class="text-yellow-500">&#9733;</span>
+              <span class="text-yellow-500">&#9733;</span>
+              <span class="text-gray-400">&#9734;</span>
+              <span class="ml-2 text-gray-600">(4.5/5)</span>
+            </div>
+            <p class="mt-4 text-gray-500">
+              "A captivating and thought-provoking journey through the different
+              lives one could have lived..."
+            </p>
+            <a
+              href="#"
+              class="inline-block mt-4 px-4 py-2 text-white bg-blue-500 rounded hover:bg-blue-600"
+              >Read Full Review</a
+            >
+          </div>
+
+          <!-- Book 2 -->
+          <div class="bg-white p-6 rounded-lg shadow-md w-full lg:w-1/3">
+            <img
+              src="images/517w2phrrrl-1596535319.avif"
+              alt="Book Cover"
+              class="min-w-full h-80 object-contain rounded-md"
+            />
+            <h3 class="mt-4 text-2xl font-bold">Where the Crawdads Sing</h3>
+            <p class="mt-2 text-gray-600">by Delia Owens</p>
+            <div class="flex items-center mt-2">
+              <span class="text-yellow-500">&#9733;</span>
+              <span class="text-yellow-500">&#9733;</span>
+              <span class="text-yellow-500">&#9733;</span>
+              <span class="text-yellow-500">&#9733;</span>
+              <span class="text-yellow-500">&#9733;</span>
+              <span class="ml-2 text-gray-600">(5/5)</span>
+            </div>
+            <p class="mt-4 text-gray-500">
+              "A beautifully written story that explores themes of loneliness,
+              survival, and resilience."
+            </p>
+            <a
+              href="#"
+              class="inline-block mt-4 px-4 py-2 text-white bg-blue-500 rounded hover:bg-blue-600"
+              >Read Full Review</a
+            >
+          </div>
+
+          <!-- Book 3 -->
+          <div class="bg-cyan-600 p-6 rounded-lg shadow-md w-full lg:w-1/3">
+            <img
+              src="images/712V06CESuL._AC_UF894,1000_QL80_.jpg"
+              alt="Book Cover"
+              class="h-64 object-center rounded-md"
+            />
+            <h3 class="mt-4 text-2xl font-bold">The Silent Patient</h3>
+            <p class="mt-2 text-gray-600">by Alex Michaelides</p>
+            <div class="flex items-center mt-2">
+              <span class="text-yellow-500">&#9733;</span>
+              <span class="text-yellow-500">&#9733;</span>
+              <span class="text-yellow-500">&#9733;</span>
+              <span class="text-gray-400">&#9734;</span>
+              <span class="text-gray-400">&#9734;</span>
+              <span class="ml-2 text-gray-600">(3/5)</span>
+            </div>
+            <p class="mt-4 text-gray-500">
+              "A psychological thriller with an unpredictable twist, but the
+              pacing felt a bit slow."
+            </p>
+            <a
+              href="#"
+              class="inline-block mt-4 px-4 py-2 text-white bg-blue-500 rounded hover:bg-blue-600"
+              >Read Full Review</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section id="cta" class="bg-softBlue py-24">
+      <!-- Main Container -->
+      <div class="max-w-lg mx-auto text-center">
+        <p class="mb-6 text-lg tracking-widest text-white uppercase">
+          Ready to get started?
+        </p>
+        <h2 class="mb-6 text-3xl font-semibold text-white md:text-4xl">
+          Contact Us Today
+        </h2>
+
+        <!-- Form -->
+        <form
+          class="flex flex-col items-center justify-center max-w-2xl mx-auto space-y-6 text-base px-6"
+        >
+          <!-- Email Input Field -->
+          <input
+            type="email"
+            class="w-full px-6 pt-3 pb-2 rounded-lg border-1 border-white focus:outline-none"
+            placeholder="Your Email Address"
+          />
+
+          <!-- Message Textarea & Submit Button -->
+          <textarea
+            class="w-full px-6 py-3 mb-4 rounded-lg border-1 border-white focus:outline-none"
+            placeholder="Your Message"
+            rows="4"
+          ></textarea>
+
+          <input
+            type="submit"
+            class="inline-flex px-6 py-3 font-semibold text-center text-white bg-softRed rounded-lg cursor-pointer hover:opacity-90 focus:outline-none"
+            value="Send Message"
+          />
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-16 bg-veryDarkBlue">
+      <!-- Footer Flex Container -->
+      <div
+        class="container flex flex-col items-center justify-between mx-auto space-y-16 px-6 md:flex-row md:space-y-0"
+      >
+        <!-- Logo/Menu Container -->
+        <div
+          class="flex flex-col items-center justify-between space-y-8 text-lg font-light md:flex-row md:space-y-0 md:space-x-14 text-grayishBlue"
+        >
+          <img src="images/" alt="LOGO" class="mb-1" />
+
+          <a href="#features" class="uppercase hover:text-softRed">Features</a>
+          <a href="#download" class="uppercase hover:text-softRed">reviews</a>
+          <a href="#faq" class="uppercase hover:text-softRed">CAT</a>
+        </div>
+
+        <!-- Social Container -->
+        <div class="flex space-x-10">
+          <a href="#">
+            <img src="images/icon-facebook.svg" alt="" class="h-6 ficon" />
+          </a>
+          <a href="#">
+            <img src="images/icon-twitter.svg" alt="" class="h-6 ficon" />
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
